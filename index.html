@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Gaming Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #4838ac;
+        font-family: 'Lexend', sans-serif;
+        color: white;
+      }
+      h1 {
+        text-align: left;
+        font-style: italic;
+      }
+      button {
+        border-radius: 10px;
+        border: none;
+        padding: 10px;
+        color: white;
+        background-color: #0b1d42;
+      }
+      button:hover {
+        background-color: #0d2e5b;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function checkPasscode() {
+        var passcode = prompt("Enter access key: (hint, it's 0707)", "");
+        if (passcode != "0707") {
+          alert("Incorrect access key. Redirecting...");
+          window.location.href = "https://www.google.com"; // Redirect to Google for safety
+        }
+      }
+      checkPasscode();
+    </script>
+    <h1><i>The Gaming Center</i></h1>
+    <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
+    <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
+    <button onclick="window.location.href='https://majesticwafer.github.io/br/'">Blumgi Rocket</button>
+    <button onclick="window.location.href='https://t.xtos.us'">Lite Tube</button>
+  </body>
+</html>
