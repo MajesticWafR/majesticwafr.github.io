@@ -1,2 +1,13 @@
-# majesticwafer.github.io
-The Gaming Center for people who are at work, school, or home! You can play many different games like Monkey Mart and Jetpack Joyride!
+flappy-html5-bird
+=================
+
+### change log
+
+2014.02.16 - 0.0.3<br/>
+将鸟翅膀上下扇动的动作改为纯CSS3实现，以提升效率；<br/>
+略微加快了鸟翅膀上下扇动的速度(0.4s to 0.3s)<br/>
+略微扩大了管子开口随机的范围(上下各增加了10像素)<br/>
+
+2014.02.17 - 0.0.4<br/>
+<s>改为使用 requestAnimationFrame 计时</s><br/>
+调整了一些场景数值<br/>
