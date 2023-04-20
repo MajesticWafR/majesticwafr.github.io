@@ -30,8 +30,8 @@
   <body>
     <script>
       function checkPasscode() {
-        var passcode = prompt("Enter access key: (hint, it's 0707)", "");
-        if (passcode != "0707") {
+        var passcode = prompt("Enter access key:", "");
+        if (passcode != "monkey") {
           alert("Incorrect access key.");
           window.location.href = "https://majesticwafer.github.io"; // Redirect to Google for safety
         }
