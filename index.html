@@ -70,20 +70,14 @@
     </div>
     <div id="content">
       <script>
-        function checkDevice() {
-          var device = prompt("Enter your device name:", "");
-          localStorage.setItem("device", device);
-          var confirmed = localStorage.getItem("confirmed");
-          if (confirmed !== "true") {
-            var response = confirm("Do you want to proceed?");
-            if (response) {
-              localStorage.setItem("confirmed", "true");
-            } else {
-              window.location.href = "https://www.google.com/";
-            }
+        function checkPasscode() {
+          var passcode = prompt("Enter access key:", "");
+          if (passcode != "k33ps") {
+            alert("Incorrect access key.");
+            window.location.href = "https://majesticwafer.github.io";
           }
         }
-        checkDevice();
+        checkPasscode();
       </script>
       <h1><i>Welcome to The Gaming Center!</i></h1>
       <p>Select a game from the menu above.</p>
