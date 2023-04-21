@@ -10,12 +10,6 @@
         background-color: #3929a3;
         font-family: 'Lexend', sans-serif;
         color: white;
-        margin: 0;
-      }
-      h1 {
-        text-align: center;
-        font-style: italic;
-        margin-top: 0;
       }
       #header {
         background-color: #2b1f7a;
@@ -25,55 +19,41 @@
         align-items: center;
         padding: 0 20px;
       }
-      #header h1 {
+      h1 {
+        text-align: left;
+        font-style: italic;
         margin: 0;
       }
-      #header h1 a {
-        color: white;
-        text-decoration: none;
-      }
-      #header button {
-        margin-right: 10px;
+      button {
         border-radius: 10px;
         border: none;
-        padding: 10px;
+        padding: 10px 20px;
         color: white;
         background-color: #0b1d42;
       }
-      #header button:hover {
+      button:hover {
         background-color: #0d2e5b;
-      }
-      #content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: calc(100vh - 50px);
       }
     </style>
   </head>
   <body>
     <div id="header">
-      <h1><a href="#">The Gaming Center</a></h1>
+      <h1><i>The Gaming Center</i></h1>
       <div>
         <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
         <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
         <button onclick="location.href='googlesolitare.html'">Google Solitare</button>
       </div>
     </div>
-    <div id="content">
-      <script>
-        function checkPasscode() {
-          var passcode = prompt("Enter access key:", "");
-          if (passcode != "monkey") {
-            alert("Incorrect access key.");
-            window.location.href = "https://majesticwafer.github.io"; // Redirect to Google for safety
-          }
+    <script>
+      function checkPasscode() {
+        var passcode = prompt("Enter access key:", "");
+        if (passcode != "monkey") {
+          alert("Incorrect access key.");
+          window.location.href = "https://majesticwafer.github.io"; // Redirect to Google for safety
         }
-        checkPasscode();
-      </script>
-      <h1><i>Welcome to The Gaming Center!</i></h1>
-      <p>Select a game from the menu above.</p>
-    </div>
+      }
+      checkPasscode();
+    </script>
   </body>
 </html>
