@@ -10,54 +10,44 @@
         background-color: #3929a3;
         font-family: 'Lexend', sans-serif;
         color: white;
-        margin: 0;
       }
       h1 {
         text-align: left;
         font-style: italic;
-        margin: 0;
+        margin-top: 0;
+      }
+      .header {
+        background-color: #2b1f7a;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-size: 24px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
       }
       button {
         border-radius: 10px;
         border: none;
-        padding: 10px;
+        padding: 10px 20px;
+        margin-right: 10px;
         color: white;
         background-color: #0b1d42;
-        margin: auto 0;
       }
       button:hover {
         background-color: #0d2e5b;
       }
-      .header {
-        background-color: #2b1f7a;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .header h1 {
-        font-size: 30px;
-        margin: 0;
-      }
       .buttons-container {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: 100%;
-        max-width: 500px;
-        margin-left: auto;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
       }
     </style>
   </head>
   <body>
-    <div class="header">
-      <h1>The Gaming Center</h1>
-      <div class="buttons-container">
-        <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
-        <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
-        <button onclick="location.href='googlesolitare.html'">Google Solitare</button>
-      </div>
-    </div>
     <script>
       function checkPasscode() {
         var passcode = prompt("Enter access key:", "");
@@ -68,5 +58,13 @@
       }
       checkPasscode();
     </script>
+    <div class="header">
+      The Gaming Center
+    </div>
+    <div class="buttons-container">
+      <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
+      <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
+      <button onclick="location.href='googlesolitare.html'">Google Solitare</button>
+    </div>
   </body>
 </html>
