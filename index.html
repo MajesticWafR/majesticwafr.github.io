@@ -11,7 +11,7 @@
         font-family: 'Lexend', sans-serif;
         color: white;
         margin: 0;
-        overflow: hidden;
+        overflow: hidden; /* disable scrolling */
       }
       h1 {
         text-align: center;
@@ -52,6 +52,12 @@
         height: calc(100vh - 50px);
       }
     </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="The Gaming Center">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
   </head>
   <body>
     <div id="header">
@@ -68,7 +74,7 @@
           var passcode = prompt("Enter access key:", "");
           if (passcode != "k33ps") {
             alert("Incorrect access key.");
-            window.location.href = "https://majesticwafer.github.io";
+            window.location.href = "https://majesticwafer.github.io"; // Redirect to Google for safety
           }
         }
         checkPasscode();
