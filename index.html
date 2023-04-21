@@ -10,10 +10,12 @@
         background-color: #3929a3;
         font-family: 'Lexend', sans-serif;
         color: white;
+        margin: 0;
       }
       h1 {
         text-align: left;
         font-style: italic;
+        margin: 0;
       }
       button {
         border-radius: 10px;
@@ -25,9 +27,19 @@
       button:hover {
         background-color: #0d2e5b;
       }
+      .header {
+        background-color: #2b1f7a;
+        padding: 10px;
+      }
+      .header h1 {
+        font-size: 30px;
+      }
     </style>
   </head>
   <body>
+    <div class="header">
+      <h1>The Gaming Center</h1>
+    </div>
     <script>
       function checkPasscode() {
         var passcode = prompt("Enter access key:", "");
@@ -38,7 +50,6 @@
       }
       checkPasscode();
     </script>
-    <h1><i>The Gaming Center</i></h1>
     <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
     <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
     <button onclick="location.href='googlesolitare.html'">Google Solitare</button>
