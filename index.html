@@ -11,6 +11,7 @@
         font-family: 'Lexend', sans-serif;
         color: white;
         margin: 0;
+        overflow: hidden;
       }
       h1 {
         text-align: center;
@@ -67,7 +68,7 @@
           var passcode = prompt("Enter access key:", "");
           if (passcode != "k33ps") {
             alert("Incorrect access key.");
-            window.location.href = "https://majesticwafer.github.io"; // Redirect to Google for safety
+            window.location.href = "https://majesticwafer.github.io";
           }
         }
         checkPasscode();
