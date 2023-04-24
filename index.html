@@ -33,13 +33,18 @@
         color: white;
         text-decoration: none;
       }
+      #header .button-container {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+      }
       #header button {
-        margin-right: 10px;
         border-radius: 10px;
         border: none;
         padding: 10px;
         color: white;
         background-color: #0b1d42;
+        margin-left: 10px;
       }
       #header button:hover {
         background-color: #0d2e5b;
@@ -49,7 +54,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: calc(100vh - 50px);
+        height: calc(100vh - 125px);
       }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -62,7 +67,7 @@
   <body>
     <div id="header">
       <h1><a href="#">The Gaming Center</a></h1>
-      <div>
+      <div class="button-container">
         <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
         <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
         <button onclick="location.href='googlesolitare.html'">Google Solitare</button>
