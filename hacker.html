@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hacker HTML Page</title>
+	<style>
+		body {
+			background-color: black;
+			color: green;
+			font-family: monospace;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<p id="output"></p>
+	<input id="input" type="text" onkeydown="if (event.keyCode == 13) processInput();" />
+	<script>
+		function processInput() {
+			var input = document.getElementById("input").value;
+			var output = document.getElementById("output");
+			var messages = ["Executing hack.js", "nrt installing", "uproot clipper completing..."];
+			var message = messages[Math.floor(Math.random() * messages.length)];
+			output.innerHTML += "<br>" + message;
+		}
+	</script>
+</body>
+</html>
