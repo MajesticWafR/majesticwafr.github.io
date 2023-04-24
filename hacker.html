@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hacker HTML Page</title>
+	<title>Hacker Terminal</title>
 	<style>
 		body {
 			background-color: black;
@@ -13,14 +13,17 @@
 </head>
 <body>
 	<p id="output"></p>
-	<input id="input" type="text" onkeydown="if (event.keyCode == 13) processInput();" />
+	<input id="input" type="text" onkeydown="if (event.keyCode == 13) processInput();" onfocus="if (this.value === 'Just start typing and press enter...') this.value = '';" onblur="if (this.value === '') this.value = 'Just start typing and press enter...';" value="Just start typing and press enter..." />
 	<script>
 		function processInput() {
 			var input = document.getElementById("input").value;
 			var output = document.getElementById("output");
-			var messages = ["Executing hack.js", "nrt installing", "uproot clipper completing...", "voice steal initiating...", "apl0 func.rt4 dedication completing...", "09? !set%steal running...", "ag4r3 dev $sudo dir//(*us/c:/ag4r3/appdata/local/r4.js ripping...", "message.txt injector start up initilization successful", "npm.js run -dir/dar.io.kk/git.ignore.rt2", "notif.injc running...", "alrt./;(rip4j execute.) starting..."];
-			var message = messages[Math.floor(Math.random() * messages.length)];
-			output.innerHTML += "<br>" + message;
+			if (input !== "Just start typing and press enter...") {
+				var messages = ["Executing hack.js", "nrt installing", "uproot clipper completing...", "voice steal initiating...", "apl0 func.rt4 dedication completing...", "09? !set%steal running...", "ag4r3 dev $sudo dir//(*us/c:/ag4r3/appdata/local/r4.js ripping...", "message.txt injector start up initilization successful", "npm.js run -dir/dar.io.kk/git.ignore.rt2", "notif.injc running...", "alrt./;(rip4j execute.) starting..."];
+				var message = messages[Math.floor(Math.random() * messages.length)];
+				output.innerHTML += "<br>" + message;
+			}
+			document.getElementById("input").value = "";
 		}
 	</script>
 </body>
