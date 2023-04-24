@@ -20,12 +20,11 @@
       }
       #header {
         background-color: #2b1f7a;
-        height: auto;
+        height: 75px;
         display: flex;
-        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
-        justify-content: space-between;
-        padding: 20px;
+        padding: 0 20px;
       }
       #header h1 {
         margin: 0;
@@ -35,7 +34,7 @@
         text-decoration: none;
       }
       #header button {
-        margin-top: 10px;
+        margin-right: 10px;
         border-radius: 10px;
         border: none;
         padding: 10px;
@@ -45,12 +44,31 @@
       #header button:hover {
         background-color: #0d2e5b;
       }
+      #menu {
+        background-color: #3929a3;
+        height: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 20px;
+      }
+      #menu button {
+        margin-right: 10px;
+        border-radius: 10px;
+        border: none;
+        padding: 10px;
+        color: white;
+        background-color: #2b1f7a;
+      }
+      #menu button:hover {
+        background-color: #3c2b9b;
+      }
       #content {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: calc(100vh - 50px);
+        height: calc(100vh - 125px);
       }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,11 +81,11 @@
   <body>
     <div id="header">
       <h1><a href="#">The Gaming Center</a></h1>
-      <div>
+    </div>
+    <div id="menu">
         <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
         <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
         <button onclick="location.href='googlesolitare.html'">Google Solitare</button>
-      </div>
     </div>
     <div id="content">
       <script>
@@ -75,7 +93,7 @@
           var passcode = prompt("Enter access key:", "");
           if (passcode != "k33ps") {
             alert("Incorrect access key.");
-            window.location.href = "https://majesticwafer.github.io";
+            window.location.href = "majesticwafer.github.io";
           }
         }
         checkPasscode();
