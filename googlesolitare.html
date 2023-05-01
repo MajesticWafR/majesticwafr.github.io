@@ -17,5 +17,17 @@
   </head>
   <body>
     <iframe src="https://www.google.com/logos/fnbx/solitaire/standalone.html"></iframe>
+    <div id="content">
+      <script>
+        function checkPasscode() {
+          var passcode = prompt("Enter access key:", "");
+          if (passcode != "7*gN2") {
+            alert("Incorrect access key.");
+            window.location.href = "https://majesticwafer.github.io";
+          }
+        }
+        checkPasscode();
+      </script>
+    </div>
   </body>
 </html>
