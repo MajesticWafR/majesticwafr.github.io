@@ -34,19 +34,23 @@
         text-decoration: none;
       }
       #header .button-container {
+        display: none; /* Hide the button container in the header */
+      }
+      #header + .button-container {
         display: flex;
         align-items: center;
-        margin-right: 20px;
+        justify-content: center;
+        margin-top: 250px; /* Adjust this value to position it as desired */
       }
-      #header button {
+      .button-container button {
         border-radius: 10px;
         border: none;
         padding: 10px;
         color: white;
         background-color: #0b1d42;
-        margin-left: 10px;
+        margin: 10px;
       }
-      #header button:hover {
+      .button-container button:hover {
         background-color: #0d2e5b;
       }
       #content {
@@ -67,12 +71,12 @@
   <body>
     <div id="header">
       <h1><a href="#">The Gaming Center</a></h1>
-      <div class="button-container">
-        <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
-        <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
-        <button onclick="location.href='googlesolitare.html'">Google Solitare</button>
-        <button onclick="location.href='sm64-js.html'">SM64 (Keyboard/Gamepad Required)</button>
-      </div>
+    </div>
+    <div class="button-container">
+      <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
+      <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
+      <button onclick="location.href='googlesolitare.html'">Google Solitaire</button>
+      <button onclick="location.href='sm64-js.html'">SM64 (Keyboard/Gamepad Required)</button>
     </div>
     <div id="content">
       <h1><i>Welcome to The Gaming Center!</i></h1>
