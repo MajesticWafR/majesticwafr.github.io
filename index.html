@@ -25,6 +25,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
+        position: relative; /* Add this */
       }
       #header h1 {
         margin: 0;
@@ -33,14 +34,16 @@
         color: white;
         text-decoration: none;
       }
-      #header .button-container {
-        display: none; /* Hide the button container in the header */
-      }
-      #header + .button-container {
+      .button-container {
+        position: absolute;
+        top: 50%; /* Center vertically */
+        left: 0; /* Align to the left */
+        transform: translateY(-50%); /* Center vertically */
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 250px; /* Adjust this value to position it as desired */
+        margin-left: 20px; /* Adjust as needed */
       }
       .button-container button {
         border-radius: 10px;
@@ -48,7 +51,7 @@
         padding: 10px;
         color: white;
         background-color: #0b1d42;
-        margin: 10px;
+        margin-bottom: 10px; /* Add margin between buttons */
       }
       .button-container button:hover {
         background-color: #0d2e5b;
@@ -71,12 +74,12 @@
   <body>
     <div id="header">
       <h1><a href="#">The Gaming Center</a></h1>
-    </div>
-    <div class="button-container">
-      <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
-      <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
-      <button onclick="location.href='googlesolitare.html'">Google Solitaire</button>
-      <button onclick="location.href='sm64-js.html'">SM64 (Keyboard/Gamepad Required)</button>
+      <div class="button-container">
+        <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
+        <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
+        <button onclick="location.href='googlesolitare.html'">Google Solitaire</button>
+        <button onclick="location.href='sm64-js.html'">SM64 (Keyboard/Gamepad Required)</button>
+      </div>
     </div>
     <div id="content">
       <h1><i>Welcome to The Gaming Center!</i></h1>
