@@ -25,7 +25,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 20px;
-        position: relative; /* Add this */
+        position: relative;
       }
       #header h1 {
         margin: 0;
@@ -36,32 +36,40 @@
       }
       .button-container {
         position: absolute;
-        top: 50%; /* Center vertically */
-        left: 0; /* Align to the left */
-        transform: translateY(-50%); /* Center vertically */
+        top: 75px; /* Move down by 75 pixels */
+        left: 0;
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        margin-left: 20px; /* Adjust as needed */
+        justify-content: flex-start; /* Arrange buttons horizontally from the left */
+        width: 100%; /* Occupy the full width */
+        padding: 0 20px; /* Add some padding */
       }
       .button-container button {
         border-radius: 10px;
         border: none;
-        padding: 10px;
+        padding: 10px 20px; /* Increase padding to make buttons bigger */
         color: white;
         background-color: #0b1d42;
-        margin-bottom: 10px; /* Add margin between buttons */
+        margin-right: 10px; /* Add margin between buttons */
+        transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
+      }
+      .button-container button:last-child {
+        margin-right: 0; /* Remove margin from the last button */
       }
       .button-container button:hover {
         background-color: #0d2e5b;
+        transform: scale(1.05); /* Enlarge the button on hover */
+      }
+      .button-container button:active {
+        transform: scale(1.1); /* Enlarge the button when clicked */
+        transition: transform 0.1s; /* Faster transition for click effect */
       }
       #content {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: calc(100vh - 125px);
+        height: calc(100vh - 200px); /* Adjust height as needed */
       }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -74,12 +82,12 @@
   <body>
     <div id="header">
       <h1><a href="#">The Gaming Center</a></h1>
-      <div class="button-container">
-        <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
-        <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
-        <button onclick="location.href='googlesolitare.html'">Google Solitaire</button>
-        <button onclick="location.href='sm64-js.html'">SM64 (Keyboard/Gamepad Required)</button>
-      </div>
+    </div>
+    <div class="button-container">
+      <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
+      <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
+      <button onclick="location.href='googlesolitare.html'">Google Solitaire</button>
+      <button onclick="location.href='sm64-js.html'">SM64 (Keyboard/Gamepad Required)</button>
     </div>
     <div id="content">
       <h1><i>Welcome to The Gaming Center!</i></h1>
