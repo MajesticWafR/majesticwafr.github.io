@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Viewer</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="website">Enter Website URL:</label>
+        <input type="text" id="website" placeholder="https://example.com">
+        <button onclick="loadWebsite()">Load Website</button>
+    </div>
+    <iframe id="iframe"></iframe>
+
+    <script>
+        function loadWebsite() {
+            const websiteUrl = document.getElementById("website").value;
+            const iframe = document.getElementById("iframe");
+            iframe.src = websiteUrl;
+        }
+    </script>
+</body>
+</html>
