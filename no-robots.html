@@ -1,34 +1,27 @@
+Certainly! Here's an HTML code snippet that prompts the user for a link and opens it in an iframe:
+
+```html
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Website Viewer</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            overflow: hidden;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+    <title>Open Link in Iframe</title>
 </head>
 <body>
-    <div>
-        <label for="website">Enter Website URL:</label>
-        <input type="text" id="website" placeholder="https://example.com">
-        <button onclick="loadWebsite()">Load Website</button>
-    </div>
-    <iframe id="iframe"></iframe>
+    <label for="linkInput">Enter a Link:</label>
+    <input type="text" id="linkInput" placeholder="Enter URL">
+    <button onclick="openLink()">Open Link</button>
+    <br>
+    <iframe id="iframe" width="800" height="400" src=""></iframe>
 
     <script>
-        function loadWebsite() {
-            const websiteUrl = document.getElementById("website").value;
-            const iframe = document.getElementById("iframe");
-            iframe.src = websiteUrl;
+        function openLink() {
+            var linkInput = document.getElementById("linkInput").value;
+            var iframe = document.getElementById("iframe");
+            iframe.src = linkInput;
         }
     </script>
 </body>
 </html>
+```
+
+Copy and paste this code into an HTML file, and when you enter a link in the input field and click the "Open Link" button, it will open the provided link in the iframe below.
