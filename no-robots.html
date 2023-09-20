@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Embed Website in Iframe</title>
+    <title>Embedded Website</title>
 </head>
 <body>
-    <label for="websiteInput">Enter a website URL:</label>
-    <input type="text" id="websiteInput" name="websiteInput">
-    <button onclick="loadWebsite()">Go</button>
-    <iframe id="websiteFrame" src="https://www.google.com" width="800" height="400"></iframe>
 
-    <script>
-        function loadWebsite() {
-            const input = document.getElementById("websiteInput").value;
-            const iframe = document.getElementById("websiteFrame");
-            
-            // Check if input is empty or matches predefined values
-            if (!input || input.toLowerCase() === "1" || input.toLowerCase() === "google" || input.toLowerCase() === "default") {
-                iframe.src = "https://www.google.com";
-            } else {
-                iframe.src = input;
-            }
-        }
-    </script>
+<h1>Embedded Website</h1>
+
+<!-- Replace "https://example.com" with the URL of the website you want to embed -->
+<iframe src="https://youtube.com" width="800" height="600" frameborder="0"></iframe>
+
+<p>This is the content of your HTML page.</p>
+
 </body>
 </html>
