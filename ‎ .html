@@ -6,7 +6,20 @@
 </head>
 <body>
 
-<iframe src="https://example.com/pdf" width="100%" height="1080" frameborder="0"></iframe>
+<iframe id="embedFrame" src="https://example.com/pdf" width="100%" height="0" frameborder="0"></iframe>
+
+<script>
+    // JavaScript to set the iframe height to the actual device height
+    function setIframeHeight() {
+        var iframe = document.getElementById('embedFrame');
+        var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        iframe.style.height = windowHeight + 'px';
+    }
+
+    // Call the function initially and whenever the window is resized
+    setIframeHeight();
+    window.addEventListener('resize', setIframeHeight);
+</script>
 
 </body>
 </html>
