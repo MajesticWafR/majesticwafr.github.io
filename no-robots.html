@@ -4,6 +4,23 @@
     <title>Embed Website in Iframe</title>
 </head>
 <body>
-    <iframe src="https://www.example.com" width="800" height="400"></iframe>
+    <label for="websiteInput">Enter a website URL:</label>
+    <input type="text" id="websiteInput" name="websiteInput">
+    <button onclick="loadWebsite()">Go</button>
+    <iframe id="websiteFrame" src="https://www.google.com" width="800" height="400"></iframe>
+
+    <script>
+        function loadWebsite() {
+            const input = document.getElementById("websiteInput").value;
+            const iframe = document.getElementById("websiteFrame");
+            
+            // Check if input is empty or matches predefined values
+            if (!input || input.toLowerCase() === "1" || input.toLowerCase() === "google" || input.toLowerCase() === "default") {
+                iframe.src = "https://www.google.com";
+            } else {
+                iframe.src = input;
+            }
+        }
+    </script>
 </body>
 </html>
