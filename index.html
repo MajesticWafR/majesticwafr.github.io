@@ -39,27 +39,17 @@
       top: 20px; /* Spaced from the top of the screen */
       left: 20px; /* Spaced from the left of the screen */
       display: flex;
-      flex-direction: column; /* Align buttons vertically */
+      flex-wrap: wrap; /* Allow buttons to wrap into multiple rows */
+      flex-direction: row; /* Align buttons horizontally */
     }
     .button-container button {
       border-radius: 10px;
       border: none;
-      padding: 10px 20px; /* Increase padding to make buttons bigger */
+      padding: 8% 16%; /* Adjust padding to make buttons 80% of the original size */
       color: white;
       background-color: #0b1d42;
-      margin-bottom: 10px; /* Add margin between buttons */
+      margin: 10px; /* Add margin between buttons */
       transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
-    }
-    .button-container button:last-child {
-      margin-bottom: 0; /* Remove margin from the last button */
-    }
-    .button-container button:hover {
-      background-color: #0d2e5b;
-      transform: scale(1.05); /* Enlarge the button on hover */
-    }
-    .button-container button:active {
-      transform: scale(1.1); /* Enlarge the button when clicked */
-      transition: transform 0.1s; /* Faster transition for click effect */
     }
     #content {
       display: flex;
@@ -86,6 +76,7 @@
     <button onclick="location.href='googlesolitare.html'">Google Solitaire</button>
     <button onclick="location.href='sm64-js.html'">SM64 (Keyboard/Gamepad Required)</button>
     <button onclick="location.href='‎ .html'">‎</button>
+    <!-- Add more buttons here as needed -->
   </div>
   <div id="content">
     <h1><i>Welcome to The Gaming Center!</i></h1>
