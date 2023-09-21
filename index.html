@@ -37,6 +37,23 @@
     .button-container {
       position: absolute;
       top: 100px; /* Spaced below the header */
+      left: 20px; /* Spaced from the left of the screen */
+      display: flex;
+      flex-wrap: wrap; /* Allow buttons to wrap into multiple rows */
+      flex-direction: row; /* Align buttons horizontally */
+    }
+    .button-container button {
+      border-radius: 10px;
+      border: none;
+      padding: 10px 20px; /* Keep the original button size */
+      color: white;
+      background-color: #0b1d42;
+      margin: 10px; /* Add margin between buttons */
+      transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
+    }
+    #sidebar {
+      position: absolute;
+      top: 100px; /* Spaced below the header */
       right: 20px; /* Spaced from the right of the screen */
       background-color: #2b1f7a; /* Box color between header and body */
       padding: 10px;
@@ -48,16 +65,25 @@
       width: 150px; /* Narrower width */
       height: 200px; /* Shorter height */
     }
-    #button-container button {
-      border-radius: 10px;
-      border: none;
-      padding: 10px 30px; /* Wider buttons */
+    #sidebar h2 {
       color: white;
-      background-color: #0b1d42;
+      margin: 0;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    #sidebar button {
+      display: block;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 30px; /* Wider buttons */
       margin: 10px 0; /* Add margin between buttons */
+      background-color: #0b1d42;
+      color: white;
+      text-align: center;
+      text-decoration: none;
       transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
     }
-    #button-container button:hover {
+    #sidebar button:hover {
       background-color: #0d2e5b;
       transform: scale(1.05);
     }
@@ -80,7 +106,16 @@
   <div id="header">
     <h1><a href="#">The Gaming Center V2 (UPDATED!)</a></h1>
   </div>
-  <div class="button-container" id="button-container">
+  <div class="button-container">
+    <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
+    <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
+    <button onclick="location.href='googlesolitare.html'">Google Solitaire</button>
+    <button onclick="location.href='sm64-js.html'">SM64 (Keyboard/Gamepad Required)</button>
+    <button onclick="location.href='‎ .html'">‎</button>
+    <!-- Add more buttons here as needed -->
+  </div>
+  <div id="sidebar">
+    <h2>Sort By</h2>
     <button onclick="location.href='featured.html'">Featured</button>
     <button onclick="location.href='newest.html'">Newest</button>
     <button onclick="location.href='popular.html'">Popular</button>
