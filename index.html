@@ -1,98 +1,95 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>The Gaming Center V2 (UPDATED!)</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-      body {
-        background-color: #3929a3;
-        font-family: 'Lexend', sans-serif;
-        color: white;
-        margin: 0;
-        overflow: hidden; /* disable scrolling */
-      }
-      h1 {
-        text-align: center;
-        font-style: italic;
-        margin-top: 0;
-      }
-      #header {
-        background-color: #2b1f7a;
-        height: 75px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
-        position: relative;
-      }
-      #header h1 {
-        margin: 0;
-      }
-      #header h1 a {
-        color: white;
-        text-decoration: none;
-      }
-      .button-container {
-        position: absolute;
-        top: 125px; /* Move down by 75 pixels */
-        left: 0;
-        display: flex;
-        align-items: left;
-        justify-content: flex-start; /* Arrange buttons horizontally from the left */
-        width: 100%; /* Occupy the full width */
-        padding: 0 55px; /* Add some padding */
-      }
-      .button-container button {
-        border-radius: 10px;
-        border: none;
-        padding: 10px 20px; /* Increase padding to make buttons bigger */
-        color: white;
-        background-color: #0b1d42;
-        margin-right: 10px; /* Add margin between buttons */
-        transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
-      }
-      .button-container button:last-child {
-        margin-right: 0; /* Remove margin from the last button */
-      }
-      .button-container button:hover {
-        background-color: #0d2e5b;
-        transform: scale(1.05); /* Enlarge the button on hover */
-      }
-      .button-container button:active {
-        transform: scale(1.1); /* Enlarge the button when clicked */
-        transition: transform 0.1s; /* Faster transition for click effect */
-      }
-      #content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: calc(100vh - 200px); /* Adjust height as needed */
-      }
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="The Gaming Center V2 (UPDATED!)">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
-  </head>
-  <body>
-    <div id="header">
-      <h1><a href="#">The Gaming Center V2 (UPDATED!)</a></h1>
-    </div>
-    <div class="button-container">
-      <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
-      <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
-      <button onclick="location.href='googlesolitare.html'">Google Solitaire</button>
-      <button onclick="location.href='sm64-js.html'">SM64 (Keyboard/Gamepad Required)</button>
-      <button onclick="location.href='‎ .html'">‎ </button>
-    </div>
-    <div id="content">
-      <h1><i>Welcome to The Gaming Center!</i></h1>
-      <p>Select a game from the menu above.</p>
-    </div>
-  </body>
+<head>
+  <title>The Gaming Center V2 (UPDATED!)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #3929a3;
+      font-family: 'Lexend', sans-serif;
+      color: white;
+      margin: 0;
+      overflow: hidden; /* disable scrolling */
+    }
+    h1 {
+      text-align: center;
+      font-style: italic;
+      margin-top: 0;
+    }
+    #header {
+      background-color: #2b1f7a;
+      height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      position: relative;
+    }
+    #header h1 {
+      margin: 0;
+    }
+    #header h1 a {
+      color: white;
+      text-decoration: none;
+    }
+    .button-container {
+      position: absolute;
+      bottom: 20px; /* Spaced from the bottom of the header */
+      left: 20px; /* Spaced from the left of the screen */
+      display: flex;
+      flex-direction: column; /* Align buttons vertically */
+    }
+    .button-container button {
+      border-radius: 10px;
+      border: none;
+      padding: 10px 20px; /* Increase padding to make buttons bigger */
+      color: white;
+      background-color: #0b1d42;
+      margin-bottom: 10px; /* Add margin between buttons */
+      transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
+    }
+    .button-container button:last-child {
+      margin-bottom: 0; /* Remove margin from the last button */
+    }
+    .button-container button:hover {
+      background-color: #0d2e5b;
+      transform: scale(1.05); /* Enlarge the button on hover */
+    }
+    .button-container button:active {
+      transform: scale(1.1); /* Enlarge the button when clicked */
+      transition: transform 0.1s; /* Faster transition for click effect */
+    }
+    #content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 200px); /* Adjust height as needed */
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="The Gaming Center V2 (UPDATED!)">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+  <div id="header">
+    <h1><a href="#">The Gaming Center V2 (UPDATED!)</a></h1>
+  </div>
+  <div class="button-container">
+    <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
+    <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
+    <button onclick="location.href='googlesolitare.html'">Google Solitaire</button>
+    <button onclick="location.href='sm64-js.html'">SM64 (Keyboard/Gamepad Required)</button>
+    <button onclick="location.href='‎ .html'">‎</button>
+  </div>
+  <div id="content">
+    <h1><i>Welcome to The Gaming Center!</i></h1>
+    <p>Select a game from the menu above.</p>
+  </div>
+</body>
 </html>
