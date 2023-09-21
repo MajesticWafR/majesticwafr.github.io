@@ -42,15 +42,37 @@
       position: absolute;
       bottom: 20px;
       right: 20px;
+      background-color: #0b1d42;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    .back-button:hover {
+      background-color: #0d2e5b;
+      transform: scale(1.05);
     }
     .featured-games {
       text-align: center;
       margin-top: 20px;
     }
-    .message {
-      text-align: center;
-      font-size: 18px;
-      margin-top: 20px;
+    .featured-games ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .featured-games li {
+      margin: 10px 0;
+    }
+    .featured-games a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    .featured-games a:hover {
+      color: #0d2e5b;
     }
   </style>
 </head>
