@@ -51,6 +51,36 @@
       margin: 10px; /* Add margin between buttons */
       transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
     }
+    #sidebar {
+      position: absolute;
+      top: 100px; /* Spaced below the header */
+      right: 20px; /* Spaced from the right of the screen */
+      background-color: #2b1f7a; /* Box color between header and body */
+      padding: 10px;
+      border-radius: 10px; /* Rounded corners for the box */
+    }
+    #sidebar h2 {
+      color: white;
+      margin: 0;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    #sidebar button {
+      display: block;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      margin: 10px 0;
+      background-color: #0b1d42;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    #sidebar button:hover {
+      background-color: #0d2e5b;
+      transform: scale(1.05);
+    }
     #content {
       display: flex;
       flex-direction: column;
@@ -77,6 +107,12 @@
     <button onclick="location.href='sm64-js.html'">SM64 (Keyboard/Gamepad Required)</button>
     <button onclick="location.href='‎ .html'">‎</button>
     <!-- Add more buttons here as needed -->
+  </div>
+  <div id="sidebar">
+    <h2>Sort By</h2>
+    <button onclick="location.href='featured.html'">Featured</button>
+    <button onclick="location.href='newest.html'">Newest</button>
+    <button onclick="location.href='popular.html'">Popular</button>
   </div>
   <div id="content">
     <h1><i>Welcome to The Gaming Center!</i></h1>
