@@ -2,4 +2,12 @@
 
 A beta testing site.
 
-SM64 ADDED!
+## New Additions
+
+Games
+- SM64
+- Retro Bowl
+
+Features
+- Game sorting (beta)
+- Totally W interface no 🧢 not trippin'
