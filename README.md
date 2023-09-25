@@ -7,6 +7,8 @@ A beta testing site.
 Games
 - SM64
 - Retro Bowl
+- Basket Bros
+- Super Mario World
 
 Features
 - Game sorting (beta)
