@@ -8,8 +8,13 @@ Games
 - SM64
 - Retro Bowl
 - Basket Bros
-- Super Mario World
+- Idle Breakout
 
 Features
 - Game sorting (beta)
 - Totally W interface no 🧢 not trippin'
+
+Patch Notes
+
+-Removed Super Mario World
+-Fixed Idle Breakout
