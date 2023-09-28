@@ -16,5 +16,5 @@ Features
 
 Patch Notes
 
--Removed Super Mario World
--Fixed Idle Breakout
+- Removed Super Mario World
+- Fixed Idle Breakout
