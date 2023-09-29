@@ -43,6 +43,13 @@
       flex-wrap: wrap; /* Allow buttons to wrap into multiple rows */
       flex-direction: row; /* Align buttons horizontally */
     }
+     .button-container-header {
+      position: absolute;
+      right: 20px; /* Spaced from the left of the screen */
+      display: flex;
+      flex-wrap: wrap; /* Allow buttons to wrap into multiple rows */
+      flex-direction: row; /* Align buttons horizontally */
+    }
     .button-container button {
       border-radius: 10px;
       border: none;
@@ -106,6 +113,8 @@
 <body>
   <div id="header">
     <h1><a href="#">The Gaming Center V2 (UPDATED!)</a></h1>
+  </div>
+  <div class="button-container-header">
     <button onclick="location.href='youtube.html'">YouTube</button>
   </div>
   <div class="button-container">
