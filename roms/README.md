@@ -1,0 +1,1 @@
+Once you download a ROM, put it into a designated folder (ex., On My iPad/ROMS/thisrom.nds) and when prompted to supply the ROM, enter the ROMS directory (or whatever you may have set it to), and choose your game. There you go, now get gaming!
