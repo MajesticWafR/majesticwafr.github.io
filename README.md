@@ -9,6 +9,7 @@ Games
 - Retro Bowl
 - Basket Bros
 - Idle Breakout
+- DS Player
 
 Features
 - Game sorting (beta)
@@ -18,3 +19,4 @@ Patch Notes
 
 - Removed Super Mario World
 - Fixed Idle Breakout
+- Added DS Player (Brought Back From the Dead)
