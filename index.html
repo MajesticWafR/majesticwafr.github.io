@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gaming Center V2</title>
+  <title>GC V2</title>
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
@@ -73,7 +73,7 @@
     #sidebar {
       position: absolute;
       top: 100px; /* Spaced below the header */
-      right: 20px; /* Spaced from the right of the screen */
+      right: -250px; /* Initially off the screen */
       background-color: #2b1f7a; /* Box color between header and body */
       padding: 10px;
       border-radius: 10px; /* Rounded corners for the box */
@@ -83,6 +83,10 @@
       justify-content: center;
       width: 125px; /* Narrower width */
       height: 200px; /* Shorter height */
+      transition: right 0.5s; /* Add transition for smooth sliding */
+    }
+    #sidebar.open {
+      right: 20px; /* Slide into open position */
     }
     #sidebar h2 {
       color: white;
@@ -127,13 +131,19 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("open");
+    }
+  </script>
 </head>
 <body>
   <div id="header">
     <h1><a href="#">The Gaming Center V2 (UPDATED!)</a></h1>
-  </div>
-  <div class="button-container-header">
-    <button onclick="location.href='youtube.html'">YouTube (Slow, Be Patient)</button>
+    <div class="button-container-header">
+      <button onclick="toggleSidebar()">Sidebar</button>
+    </div>
   </div>
   <div class="button-container">
     <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
