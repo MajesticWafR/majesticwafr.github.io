@@ -73,8 +73,7 @@
     #sidebar {
       position: absolute;
       top: 100px; /* Spaced below the header */
-      right: -250px; /* Off the screen by 250 pixels */
-      width: 125px; /* Narrower width */
+      right: 20px; /* Spaced from the right of the screen */
       background-color: #2b1f7a; /* Box color between header and body */
       padding: 10px;
       border-radius: 10px; /* Rounded corners for the box */
@@ -82,10 +81,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      display: none; /* Initially hidden */
-    }
-    #sidebar.open {
-      right: 0; /* Slide the sidebar into view */
+      width: 125px; /* Narrower width */
+      height: 200px; /* Shorter height */
     }
     #sidebar h2 {
       color: white;
@@ -111,10 +108,10 @@
     }
     #content {
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
-      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 200px); /* Adjust height as needed */
     }
     footer {
       text-align: bottom;
@@ -124,16 +121,21 @@
       justify-content: center;
     }
   </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="GC V2">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
 </head>
 <body>
   <div id="header">
     <h1><a href="#">The Gaming Center V2 (UPDATED!)</a></h1>
   </div>
   <div class="button-container-header">
-    <button onclick="toggleSidebar()">Sidebar</button>
+    <button onclick="location.href='youtube.html'">YouTube (Slow, Be Patient)</button>
   </div>
   <div class="button-container">
-    <button onclick="location.href='youtube.html'">YouTube (Slow, Be Patient)</button>
     <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
     <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
     <button onclick="location.href='googlesolitare.html'">Google Solitaire</button>
@@ -174,11 +176,6 @@
 
             $("#user_agent").text(navigator.userAgent);
         });
-
-        function toggleSidebar() {
-          var sidebar = document.getElementById("sidebar");
-          sidebar.classList.toggle("open");
-        }
     </script>
   </footer>
 </body>
