@@ -179,14 +179,19 @@
         });
     </script>
   </footer>
-  <audio id="backgroundMusic" autoplay loop>
-    <source src="music/song1.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
   <script>
-    var audio = document.getElementById("backgroundMusic");
-    audio.volume = 0.15; // Set the volume to 15% of the original volume
+    var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    var audioElement = new Audio("music/song1.mp3");
+    var audioSource = audioContext.createMediaElementSource(audioElement);
+    var gainNode = audioContext.createGain();
+
+    audioSource.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    gainNode.gain.value = 0.15; // Set the volume to 15% of the original volume
+
+    audioElement.loop = true; // Enable looping
+    audioElement.autoplay = true; // Start playing automatically
   </script>
 </body>
 </html>
