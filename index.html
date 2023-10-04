@@ -73,7 +73,7 @@
     #sidebar {
       position: absolute;
       top: 100px; /* Spaced below the header */
-      right: 20px; /* Spaced from the right of the screen */
+      right: -250px; /* Off the screen by 250 pixels */
       background-color: #2b1f7a; /* Box color between header and body */
       padding: 10px;
       border-radius: 10px; /* Rounded corners for the box */
@@ -83,6 +83,10 @@
       justify-content: center;
       width: 125px; /* Narrower width */
       height: 200px; /* Shorter height */
+      transition: right 0.5s; /* Add transition for smooth sliding animation */
+    }
+    #sidebar.open {
+      right: 20px; /* Slide to open state */
     }
     #sidebar h2 {
       color: white;
@@ -134,7 +138,7 @@
     <h1><a href="#">The Gaming Center V2 (UPDATED!)</a></h1>
   </div>
   <div class="button-container-header">
-    <button onclick="location.href='youtube.html'">YouTube (Slow, Be Patient)</button>
+    <button onclick="toggleSidebar()">Sidebar</button>
   </div>
   <div class="button-container">
     <button onclick="location.href='monkeymart.html'">Monkey Mart</button>
@@ -177,6 +181,11 @@
 
             $("#user_agent").text(navigator.userAgent);
         });
+
+        function toggleSidebar() {
+          var sidebar = document.getElementById("sidebar");
+          sidebar.classList.toggle("open");
+        }
     </script>
   </footer>
   <script>
