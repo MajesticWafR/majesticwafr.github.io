@@ -1,0 +1,21 @@
+.blobs {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: radial-gradient(#ffffff 10%, transparent 10%);
+  background-size: 3px 3px;
+  animation: blobs-flow 10s linear infinite;
+}
+
+@keyframes blobs-flow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
