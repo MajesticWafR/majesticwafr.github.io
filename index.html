@@ -12,7 +12,8 @@
       font-family: 'Lexend', sans-serif;
       color: white;
       margin: 0;
-      overflow: hidden; /* disable scrolling */
+      overflow-x: hidden; /* Disable horizontal scrolling */
+      overflow-y: hidden; /* Disable vertical scrolling */
     }
     h1 {
       text-align: center;
@@ -87,6 +88,8 @@
     }
     #sidebar.open {
       right: 20px; /* Slide into open position */
+      overflow-x: hidden; /* Disable horizontal scrolling */
+      overflow-y: hidden; /* Disable vertical scrolling */
     }
     #sidebar h2 {
       color: white;
