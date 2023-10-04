@@ -179,5 +179,14 @@
         });
     </script>
   </footer>
+  <audio id="backgroundMusic" autoplay loop>
+    <source src="music/song1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    var audio = document.getElementById("backgroundMusic");
+    audio.volume = 0.15; // Set the volume to 15% of the original volume
+  </script>
 </body>
 </html>
