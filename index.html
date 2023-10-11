@@ -147,20 +147,6 @@
       sidebar.classList.toggle("open");
     }
   </script>
-  <script>
-    fetch('https://api.ipify.org?format=json')
-      .then(response => response.json())
-      .then(data => {
-        console.log(data.ip);
-        if (data.ip = "192.149.67.146") {
-          alert("Access denied.");
-          window.location.href = "about:blank";
-        } 
-        else {
-          alert("No new updates.")
-        }
-      });
-  </script>
 </head>
 <body>
   <div id="header">
