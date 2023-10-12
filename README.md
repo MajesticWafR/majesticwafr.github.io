@@ -21,6 +21,7 @@ Patch Notes
 - Fixed Idle Breakout
 - Added DS Player (Brought Back From the Dead)
 - Supplyed 3 new DS ROMS (Pokemon Platinum, Pokemon Diamond, Super Mario 64 DS)
+- Added ForeFront AI
 
 ## Info
 
