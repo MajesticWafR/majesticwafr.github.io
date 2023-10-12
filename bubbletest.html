@@ -2,66 +2,47 @@
 <html>
 <head>
   <style>
-    body {
-      position: relative;
-      height: 100vh;
-      background-color: #f2f2f2;
-    }
-
     .bubble {
       position: absolute;
-      bottom: 0;
-      width: 20px;
-      height: 20px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
+      background-color: #7733ff;
       animation: floatBubble linear infinite;
-    }
-
-    .small-bubble {
-      z-index: 1;
-    }
-
-    .big-bubble {
-      z-index: 0;
     }
 
     @keyframes floatBubble {
       0% {
-        transform: translateX(100%);
+        transform: translate(0, 0);
+        background-color: #7733ff;
       }
       100% {
-        transform: translateX(-100%);
+        transform: translate(100vw, 0);
+        background-color: #9966ff;
       }
     }
   </style>
 </head>
 <body>
-  <div id="bubbleContainer"></div>
-
   <script>
     function createBubble() {
-      const colors = ["#884dff", "#9966ff", "#7733ff"];
-      const bubble = document.createElement("div");
-      bubble.classList.add("bubble");
-      bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-      bubble.style.left = `${Math.random() * 100}%`;
-      bubble.style.animationDuration = `${Math.random() * 5 + 3}s`;
+      const bubble = document.createElement('div');
+      bubble.classList.add('bubble');
+      document.body.appendChild(bubble);
 
-      // Add class based on bubble size
-      if (Math.random() < 0.5) {
-        bubble.classList.add("small-bubble");
-      } else {
-        bubble.classList.add("big-bubble");
-      }
-
-      document.getElementById("bubbleContainer").appendChild(bubble);
-      bubble.addEventListener("animationend", () => {
+      bubble.addEventListener('animationend', () => {
         bubble.remove();
         createBubble();
       });
     }
 
-    createBubble();
+    function spawnBubbles() {
+      for (let i = 0; i < 3; i++) {
+        createBubble();
+      }
+    }
+
+    spawnBubbles();
   </script>
 </body>
 </html>
