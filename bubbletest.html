@@ -2,6 +2,12 @@
 <html>
 <head>
   <style>
+    body {
+      position: relative;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+
     .bubble {
       position: absolute;
       bottom: 0;
@@ -9,6 +15,14 @@
       height: 20px;
       border-radius: 50%;
       animation: floatBubble linear infinite;
+    }
+
+    .small-bubble {
+      z-index: 1;
+    }
+
+    .big-bubble {
+      z-index: 0;
     }
 
     @keyframes floatBubble {
@@ -32,6 +46,14 @@
       bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
       bubble.style.left = `${Math.random() * 100}%`;
       bubble.style.animationDuration = `${Math.random() * 5 + 3}s`;
+
+      // Add class based on bubble size
+      if (Math.random() < 0.5) {
+        bubble.classList.add("small-bubble");
+      } else {
+        bubble.classList.add("big-bubble");
+      }
+
       document.getElementById("bubbleContainer").appendChild(bubble);
       bubble.addEventListener("animationend", () => {
         bubble.remove();
