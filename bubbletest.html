@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .bubble {
+      position: absolute;
+      bottom: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      animation: floatBubble linear infinite;
+    }
+
+    @keyframes floatBubble {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="bubbleContainer"></div>
+
+  <script>
+    function createBubble() {
+      const colors = ["#884dff", "#9966ff", "#7733ff"];
+      const bubble = document.createElement("div");
+      bubble.classList.add("bubble");
+      bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      bubble.style.left = `${Math.random() * 100}%`;
+      bubble.style.animationDuration = `${Math.random() * 5 + 3}s`;
+      document.getElementById("bubbleContainer").appendChild(bubble);
+      bubble.addEventListener("animationend", () => {
+        bubble.remove();
+        createBubble();
+      });
+    }
+
+    createBubble();
+  </script>
+</body>
+</html>
