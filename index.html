@@ -8,7 +8,7 @@
    <link rel="icon" type="image/jpeg" href="IMG_0085.jpeg">
    <style>
      body {
-       background-color: #3929a3;
+       background-color: #f5f3ea; /* Cozy, light vanilla/coffee color */
       font-family: 'Lexend', sans-serif;
       color: white;
       margin: 0;
@@ -21,7 +21,7 @@
       margin-top: 0;
     }
     #header {
-      background-color: #2b1f7a;
+      background-color: #e8e3d4; /* Cozy, light vanilla/coffee color */
       height: 75px;
       display: flex;
       justify-content: space-between;
@@ -33,7 +33,7 @@
       margin: 0;
     }
     #header h1 a {
-      color: white;
+      color: #3929a3; /* Darker color for contrast */
       text-decoration: none;
     }
     .button-container {
@@ -54,29 +54,29 @@
       flex-direction: row; /* Align buttons horizontally */
     }
     .button-container button {
-      border-radius: 10px;
+      border-radius: 5px; /* Slightly more square */
       border: none;
       padding: 12.5px 20px; /* Keep the original button size */
       color: white;
-      background-color: #0b1d42;
+      background-color: #e8e3d4; /* Cozy, light vanilla/coffee color */
       margin: 12.5px; /* Add margin between buttons */
       transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
     }
      .button-container-header button {
-      border-radius: 10px;
+      border-radius: 5px; /* Slightly more square */
       border: none;
       padding: 12.5px 20px; /* Keep the original button size */
       color: white;
-      background-color: #0b1d42;
+      background-color: transparent; /* No background color */
       margin: 12.5px; /* Add margin between buttons */
       transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
     }
     #button-container button:hover {
-      background-color: #0d2e5b;
+      background-color: #d1c8b7; /* Darker color for hover effect */
       transform: scale(1.05);
     }
     #button-container-header button:hover {
-      background-color: #0d2e5b;
+      background-color: #d1c8b7; /* Darker color for hover effect */
       transform: scale(1.05);
     }
     #patch-notes {
@@ -88,21 +88,21 @@
     }
     #sidebar {
       position: absolute;
-      top: 100px; /* Spaced below the header */
+      top: 75px; /* Stretch from the top of the screen */
+      bottom: 0; /* Stretch to the bottom of the screen */
       right: -250px; /* Initially off the screen */
-      background-color: #2b1f7a; /* Box color between header and body */
+      background-color: #e8e3d4; /* Cozy, light vanilla/coffee color */
       padding: 10px;
-      border-radius: 10px; /* Rounded corners for the box */
+      border-radius: 0; /* No rounded corners */
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       width: 125px; /* Narrower width */
-      height: 200px; /* Shorter height */
       transition: right 0.5s; /* Add transition for smooth sliding */
     }
     #sidebar.open {
-      right: 20px; /* Slide into open position */
+      right: 0; /* Slide into open position */
       overflow-x: hidden; /* Disable horizontal scrolling */
       overflow-y: hidden; /* Disable vertical scrolling */
     }
@@ -115,17 +115,17 @@
     #sidebar button {
       display: block;
       border: none;
-      border-radius: 10px;
+      border-radius: 5px; /* Slightly more square */
       padding: 10px 30px; /* Wider buttons */
       margin: 10px 0; /* Add margin between buttons */
-      background-color: #0b1d42;
+      background-color: #e8e3d4; /* Cozy, light vanilla/coffee color */
       color: white;
       text-align: center;
       text-decoration: none;
       transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
     }
     #sidebar button:hover {
-      background-color: #0d2e5b;
+      background-color: #d1c8b7; /* Darker color for hover effect */
       transform: scale(1.05);
     }
     #content {
@@ -133,7 +133,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: calc(100vh - 200px); /* Adjust height as needed */
+      height: calc(100vh - 150px); /* Adjust height as needed */
     }
     footer {
       text-align: bottom;
@@ -160,7 +160,7 @@
   <div id="header">
     <h1><a href="#">The Gaming Center V2 (UPDATED!)</a></h1>
     <div class="button-container-header">
-      <button onclick="toggleSidebar()">Sidebar</button>
+      <button onclick="toggleSidebar()">&#9776;</button> <!-- Hamburger icon -->
     </div>
   </div>
   <div class="button-container">
