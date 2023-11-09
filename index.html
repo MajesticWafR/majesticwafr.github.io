@@ -38,10 +38,10 @@
     }
     .button-container {
       position: absolute;
-      top: 100px; /* Spaced below the header */
+      bottom: 100px; /* Spaced below the header */
       left: 20px; /* Spaced from the left of the screen */
       display: flex;
-      margin-right: 165px;
+      margin-right: 20px;
       flex-wrap: wrap; /* Allow buttons to wrap into multiple rows */
       flex-direction: row; /* Align buttons horizontally */
     }
@@ -160,7 +160,7 @@
   <div id="header">
     <h1><a href="#">The Gaming Center V2 (UPDATED!)</a></h1>
     <div class="button-container-header">
-      <button onclick="toggleSidebar()">Sidebar</button>
+      <button onclick="toggleSidebar()" style="font-size: 300%;">&#9776;</button>
     </div>
   </div>
   <div class="button-container">
