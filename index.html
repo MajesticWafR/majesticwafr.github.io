@@ -38,7 +38,7 @@
     }
     .button-container {
       position: absolute;
-      bottom: 100px; /* Spaced below the header */
+      bottom: 20px; /* Spaced below the header */
       left: 20px; /* Spaced from the left of the screen */
       display: flex;
       margin-right: 20px;
@@ -194,10 +194,10 @@
     <p>Select a game from the menu above.</p>
   </div>
   <footer>
-    <p style="font-size:10px"><strong>IP:</strong> <span id="ip_address"></span></p>
+    <p style="position:fixed; top:100; font-size:10px"><strong>IP:</strong> <span id="ip_address"></span></p>
     &nbsp;
     &nbsp;
-    <p style="font-size:10px"><strong>Country:</strong> <span id="country_name"></span></p>
+    <p style="position:fixed; top:100; font-size:10px"><strong>Country:</strong> <span id="country_name"></span></p>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
