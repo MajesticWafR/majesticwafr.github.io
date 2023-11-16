@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GC V2</title>
+  <title>Wafer Café</title>
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
@@ -38,10 +38,10 @@
     }
     .button-container {
       position: absolute;
-      bottom: 20px; /* Spaced below the header */
+      top: 100px; /* Spaced below the header */
       left: 20px; /* Spaced from the left of the screen */
       display: flex;
-      margin-right: 20px;
+      margin-right: 165px;
       flex-wrap: wrap; /* Allow buttons to wrap into multiple rows */
       flex-direction: row; /* Align buttons horizontally */
     }
@@ -136,13 +136,12 @@
       height: calc(100vh - 200px); /* Adjust height as needed */
     }
     footer {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-}
+      text-align: bottom;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -159,9 +158,9 @@
 </head>
 <body>
   <div id="header">
-    <h1><a href="#">The Gaming Center V2 (UPDATED!)</a></h1>
+    <h1><a href="#">The Wafer Café</a></h1>
     <div class="button-container-header">
-      <button onclick="toggleSidebar()" style="font-size:175%;">&#9776;</button>
+      <button onclick="toggleSidebar()">Sidebar</button>
     </div>
   </div>
   <div class="button-container">
@@ -175,7 +174,6 @@
     <button onclick="location.href='ds.html'">DS Player</button>
     <button onclick="location.href='crossyroad.html'">Crossy Road</button>
     <button onclick="location.href='youtube.html'">YouTube (Patience)</button>
-    <button onclick="location.href='forefront.html'">ForeFront AI</button>
     <!-- Add more buttons here as needed -->
   </div>
   <div id="patch-notes">
@@ -191,14 +189,14 @@
     <button onclick="location.href='popular.html'">Popular</button>
   </div>
   <div id="content">
-    <h1><i>Welcome to The Gaming Center!</i></h1>
+    <h1><i>Welcome to The Wafer Café!</i></h1>
     <p>Select a game from the menu above.</p>
   </div>
   <footer>
-    <p style="top:100; font-size:10px"><strong>IP:</strong> <span id="ip_address"></span></p>
+    <p style="font-size:10px"><strong>IP:</strong> <span id="ip_address"></span></p>
     &nbsp;
     &nbsp;
-    <p style="top:100; font-size:10px"><strong>Country:</strong> <span id="country_name"></span></p>
+    <p style="font-size:10px"><strong>Country:</strong> <span id="country_name"></span></p>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
