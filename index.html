@@ -47,7 +47,14 @@
       flex-wrap: wrap; /* Allow buttons to wrap into multiple rows */
       flex-direction: row; /* Align buttons horizontally */
     }
-     .button-container-header {
+    .button-container img {
+      border-radius: 6px;
+      width: calc(100% - 20px); /* Subtract the desired margin from the width */
+      height: auto;
+      object-fit: contain;
+      margin: 10px; /* Add the desired margin */
+   	}
+    .button-container-header {
       position: absolute;
       top: 5px;
       right: 20px; /* Spaced from the left of the screen */
@@ -166,10 +173,9 @@
     </div>
   </div>
   <div class="button-container">
-    <div id="monkey-mart">
-      <div onclick="location.href='monkeymart.html'">Monkey Mart</div>
-        <img src="/assets/monkey-mart.jpeg" alt="Monkey Mart">
-        <span>Monkey Mart</span>
+    <div class="button-container" onclick="location.href='monkeymart.html'">
+				<img src="/assets/monkey-mart.jpeg" alt="Monkey Mart">
+				<span class="button-text">Monkey Mart</span>
     </div>
     <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
     <button onclick="location.href='googlesolitare.html'">Google Solitaire</button>
