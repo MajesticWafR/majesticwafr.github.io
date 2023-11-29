@@ -38,7 +38,7 @@
       color: white;
       text-decoration: none;
     }
-    .button-container {
+    .container {
       position: absolute;
       top: 100px; /* Spaced below the header */
       left: 20px; /* Spaced from the left of the screen */
@@ -46,6 +46,15 @@
       margin-right: 165px;
       flex-wrap: wrap; /* Allow buttons to wrap into multiple rows */
       flex-direction: row; /* Align buttons horizontally */
+    }
+    .button-container {
+      border-radius: 10px;
+      border: none;
+      padding: 12.5px 20px; /* Keep the original button size */
+      color: white;
+      background-color: #0b1d42;
+      margin: 12.5px; /* Add margin between buttons */
+      transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
     }
     .button-container img {
       border-radius: 6px;
@@ -177,11 +186,11 @@
       <button onclick="toggleSidebar()">Sidebar</button>
     </div>
   </div>
-  <div class="button-container">
-    <button onclick="location.href='monkeymart.html'">
+  <div class="container">
+    <div class="button-container" onclick="location.href='monkeymart.html'">
 	<img src="/assets/monkey-mart.jpeg" alt="Monkey Mart">
 	<span class="button-text">Monkey Mart</span>
-    </button>
+    </div>
     <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
     <button onclick="location.href='googlesolitare.html'">Google Solitaire</button>
     <button onclick="window.location.href='https://majesticwafer.github.io/SM64-JS/index.html'">SM64 (Keyboard/Gamepad Required)</button>
