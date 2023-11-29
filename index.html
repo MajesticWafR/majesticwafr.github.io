@@ -55,8 +55,8 @@
       background-color: #0b1d42;
       margin: 12.5px; /* Add margin between buttons */
       transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
-      width: 1%;
-      height: 110%;
+      width: 150px;
+      height: 90px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -84,16 +84,7 @@
       flex-wrap: wrap; /* Allow buttons to wrap into multiple rows */
       flex-direction: row; /* Align buttons horizontally */
     }
-    .button-container button {
-      border-radius: 10px;
-      border: none;
-      padding: 12.5px 20px; /* Keep the original button size */
-      color: white;
-      background-color: #0b1d42;
-      margin: 12.5px; /* Add margin between buttons */
-      transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
-    }
-     .button-container-header button {
+    .button-container-header button {
       border-radius: 10px;
       border: none;
       padding: 12.5px 20px; /* Keep the original button size */
@@ -199,9 +190,18 @@
 	<img src="/assets/monkey-mart.jpeg" alt="Monkey Mart">
 	<span class="button-text">Monkey Mart</span>
     </div>
-    <button onclick="location.href='jetpackjoyride.html'">Jetpack Joyride</button>
-    <button onclick="location.href='googlesolitare.html'">Google Solitaire</button>
-    <button onclick="window.location.href='https://majesticwafer.github.io/SM64-JS/index.html'">SM64 (Keyboard/Gamepad Required)</button>
+    <div class="button-container" onclick="location.href='jetpackjoyride.html'">
+	<img src="/assets/jetpack-joyride.jpeg" alt="Jetpack Joyride">
+	<span class="button-text">Jetpack Joyride</span>
+    </div>
+    <div class="button-container" onclick="location.href='googlesolitare.html'">
+	<img src="/assets/google-solitare.jpeg" alt="Google Solitare">
+	<span class="button-text">Google Solitare</span>
+    </div>
+    <div class="button-container" onclick="window.location.href='https://majesticwafer.github.io/SM64-JS/index.html'">
+	<img src="/assets/sm64.jpeg" alt="Super Mario 64">
+	<span class="button-text">Super Mario 64</span>
+    </div>
     <button onclick="location.href='retrobowl.html'">Retro Bowl</button>
     <button onclick="location.href='basketbros.html'">Basket Bros</button>
     <button onclick="location.href='idlebreakout.html'">Idle Breakout</button>
@@ -214,9 +214,10 @@
   </div>
   <div id="patch-notes">
     <h3>Patch Notes</h3>
-    <p>- DS Player</p>
-    <p>- Patch Notes</p>
-    <p>- Existing</p>
+    <p>- Blumgi Rocket</p>
+    <p>- YT Vid. Downloader</p>
+    <p>- Tiny Fishing</p>
+    <p>- Updated Buttons</p>
   </div>
   <div id="sidebar">
     <h2>Sort By</h2>
