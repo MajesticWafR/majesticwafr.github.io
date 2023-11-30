@@ -247,30 +247,9 @@
     <button onclick="location.href='newest.html'">Newest</button>
     <button onclick="location.href='popular.html'">Popular</button>
   </div>
-  <div style="margin-top: 100px;" id="content">
+  <div style="margin-top: 135px;" id="content">
     <h1><i>Welcome to The Wafer Café!</i></h1>
     <p>Select a game from the menu above.</p>
   </div>
-  <footer>
-    <p style="font-size:10px"><strong>IP:</strong> <span id="ip_address"></span></p>
-    &nbsp;
-    &nbsp;
-    <p style="font-size:10px"><strong>Country:</strong> <span id="country_name"></span></p>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $.getJSON("https://ipapi.co/json/", function(data) {
-                $("#ip_address").text(data.ip);
-                $("#country_name").text(data.country_name);
-                $("#region_name").text(data.region);
-                $("#city_name").text(data.city);
-                $("#latitude").text(data.latitude);
-                $("#longitude").text(data.longitude);
-            });
-
-            $("#user_agent").text(navigator.userAgent);
-        });
-    </script>
-  </footer>
 </body>
 </html>
