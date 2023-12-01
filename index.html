@@ -15,13 +15,25 @@
       margin: 0;
       overflow-x: hidden; /* Disable horizontal scrolling */
       overflow-y: hidden; /* Disable vertical scrolling */
-      transition: background-color 1s, background-image 1s;
+      animation: fadeToWhite 10s infinite;
     }
     body.second-background {
       background-color: #ffffff;
       background-image: linear-gradient(25deg, #ffffff, #3929a3);
       transition: background-color 5s;
     }
+    @keyframes fadeToWhite {
+      0% {
+        background-color: #3929a3;
+      }
+      50% {
+        background-color: #ffffff;
+        background-image: linear-gradient(25deg, #ffffff, #3929a3);
+      }
+      100% {
+        background-color: #3929a3;
+      }
+    }   
     h1 {
       text-align: center;
       font-style: italic;
@@ -188,7 +200,7 @@
 </head>
 <body>
   <script>
-    function toggleBackground() {
+    function toggleBackground( {
       var body = document.body;
       if (body.classList.contains('second-background')) {
         body.classList.remove('second-background');
