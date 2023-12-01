@@ -15,23 +15,11 @@
       margin: 0;
       overflow-x: hidden; /* Disable horizontal scrolling */
       overflow-y: hidden; /* Disable vertical scrolling */
-      animation: fadeToWhite 10s infinite;
     }
     body.second-background {
       background-color: #ffffff;
       background-image: linear-gradient(25deg, #ffffff, #3929a3);
       transition: background-color 5s;
-    }
-    @keyframes fadeToWhite {
-      0% {
-        background-image: linear-gradient(25deg, #3929a3, #4133a1);
-      }
-      50% {
-        background-image: linear-gradient(25deg, #ffffff, #3929a3);
-      }
-      100% {
-        background-image: linear-gradient(25deg, #3929a3, #4133a1);
-      }
     }   
     h1 {
       text-align: center;
@@ -190,6 +178,21 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
+  <script>
+    const images = [
+      "linear-gradient(25deg, #3929a3, #4133a1)",
+      "linear-gradient(25deg, #ffffff, #3929a3)",
+      "linear-gradient(25deg, #3929a3, #4133a1)"
+    ];
+    let currentImage = 0;
+
+    function changeBackgroundImage() {
+      document.body.style.backgroundImage = images[currentImage];
+      currentImage = (currentImage + 1) % images.length;
+    }
+
+    setInterval(changeBackgroundImage, 10000); // Change image every 10 seconds
+  </script>
   <script>
     function toggleSidebar() {
       var sidebar = document.getElementById("sidebar");
