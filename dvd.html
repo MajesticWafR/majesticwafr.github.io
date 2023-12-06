@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DVD Bouncing Image</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    img {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <img id="dvd" src="assets/image/dvd.jpeg" alt="DVD Logo">
+  <script>
+    const dvd = document.getElementById('dvd');
+    const speedX = 2;
+    const speedY = 2;
+    let x = 0;
+    let y = 0;
+
+    function animate() {
+      const maxX = window.innerWidth - dvd.width;
+      const maxY = window.innerHeight - dvd.height;
+
+      x += speedX;
+      y += speedY;
+
+      if (x <= 0 || x >= maxX) {
+        speedX *= -1;
+      }
+      if (y <= 0 || y >= maxY) {
+        speedY *= -1;
+      }
+
+      dvd.style.left = x + 'px';
+      dvd.style.top = y + 'px';
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
