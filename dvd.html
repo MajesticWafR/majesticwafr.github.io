@@ -19,10 +19,10 @@
   <img id="dvd" src="assets/image/dvd.jpeg" alt="DVD Logo">
   <script>
     const dvd = document.getElementById('dvd');
-    const speedX = 2;
-    const speedY = 2;
     let x = 0;
     let y = 0;
+    let speedX = 2;
+    let speedY = 2;
 
     function animate() {
       const maxX = window.innerWidth - dvd.width;
@@ -32,10 +32,10 @@
       y += speedY;
 
       if (x <= 0 || x >= maxX) {
-        speedX *= -1;
+        speedX = -speedX;
       }
       if (y <= 0 || y >= maxY) {
-        speedY *= -1;
+        speedY = -speedY;
       }
 
       dvd.style.left = x + 'px';
