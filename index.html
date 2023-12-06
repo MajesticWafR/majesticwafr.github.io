@@ -7,7 +7,7 @@
    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap" rel="stylesheet">
    <link rel="icon" type="image/jpeg" href="assets/icon/favicon.jpeg">
    <style>
-    body {
+     body {
       background-color: #3929a3;
       background-image: linear-gradient(25deg, #3929a3, #4133a1);
       font-family: 'Lexend', sans-serif;
@@ -16,11 +16,6 @@
       overflow-x: hidden; /* Disable horizontal scrolling */
       overflow-y: hidden; /* Disable vertical scrolling */
     }
-    body.second-background {
-      background-color: #ffffff;
-      background-image: linear-gradient(25deg, #ffffff, #3929a3);
-      transition: background-color 5s;
-    }   
     h1 {
       text-align: center;
       font-style: italic;
@@ -60,6 +55,8 @@
       background-color: #0b1d42;
       margin: 12.5px; /* Add margin between buttons */
       transition: transform 0.2s, background-color 0.2s; /* Add transition for hover and click effects */
+      width: 135px;
+      height: 90px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -68,10 +65,10 @@
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     }
     .button-container img {
-      border-radius: 15px;
+      border-radius: 6px;
       width: calc(100% - 25px); /* Subtract the desired margin from the width */
       height: calc(100% - 25px);;
-      object-fit: cover;
+      object-fit: contain;
       margin-top: 6px;
       margin-bottom: 6px; /* Add the desired margin */
     }
@@ -88,8 +85,6 @@
       flex-direction: row; /* Align buttons horizontally */
     }
     .button-container-header button {
-      width: 65px;
-      height: 85px;
       border-radius: 10px;
       border: none;
       padding: 12.5px 20px; /* Keep the original button size */
@@ -117,8 +112,7 @@
       position: absolute;
       top: 100px; /* Spaced below the header */
       right: -250px; /* Initially off the screen */
-      background-color: #5849bb; /* Box color between header and body */
-      background-image: linear-gradient(85deg, #5849bb, #4133a1);
+      background-color: #2b1f7a; /* Box color between header and body */
       padding: 10px;
       border-radius: 10px; /* Rounded corners for the box */
       display: flex;
@@ -169,7 +163,6 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      margin-bottom: 75px;
     }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -179,21 +172,6 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
   <script>
-    cons images = [
-      "linear-gradient(25deg, #3929a3, #4133a1)",
-      "linear-gradient(25deg, #ffffff, #3929a3)",
-      "linear-gradient(25deg, #3929a3, #4133a1)"
-    ];
-    let currentImage = 0;
-
-    function changeBackgroundImage() {
-      document.body.style.backgroundImage = images[currentImage];
-      currentImage = (currentImage + 1) % images.length;
-    }
-
-    setInterval(changeBackgroundImage, 10000); // Change image every 10 seconds
-  </script>
-  <script>
     function toggleSidebar() {
       var sidebar = document.getElementById("sidebar");
       sidebar.classList.toggle("open");
@@ -201,18 +179,6 @@
   </script>
 </head>
 <body>
-  <script>
-    function toggleBackground( {
-      var body = document.body;
-      if (body.classList.contains('second-background')) {
-        body.classList.remove('second-background');
-      } else {
-        body.classList.add('second-background');
-      }
-    }
-
-    setInterval(toggleBackground, 5000); // Change background every 5 seconds
-  </script>
   <div id="header">
     <h1><a href="#">The Wafer Café</a></h1>
     <div class="button-container-header">
@@ -258,7 +224,7 @@
     </div>
     <div class="button-container" onclick="window.location.href='https://majesticwafer.github.io/yt-download/'">
 	<img src="/assets/icon/yt-dl.jpeg" alt="YouTube Video Downloader">
-	<span class="button-text">YouTube Downloader</span>
+	<span class="button-text">YouTube Video Downloader</span>
     </div>
     <div class="button-container" onclick="window.location.href='https://majesticwafer.github.io/tiny-fishing/'">
 	<img src="/assets/icon/tiny-fishing.jpeg" alt="Tiny Fishing">
@@ -279,9 +245,30 @@
     <button onclick="location.href='newest.html'">Newest</button>
     <button onclick="location.href='popular.html'">Popular</button>
   </div>
-  <div style="margin-top: 170px;" id="content">
+  <div id="content">
     <h1><i>Welcome to The Wafer Café!</i></h1>
     <p>Select a game from the menu above.</p>
   </div>
+  <footer>
+    <p style="font-size:10px"><strong>IP:</strong> <span id="ip_address"></span></p>
+    &nbsp;
+    &nbsp;
+    <p style="font-size:10px"><strong>Country:</strong> <span id="country_name"></span></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.getJSON("https://ipapi.co/json/", function(data) {
+                $("#ip_address").text(data.ip);
+                $("#country_name").text(data.country_name);
+                $("#region_name").text(data.region);
+                $("#city_name").text(data.city);
+                $("#latitude").text(data.latitude);
+                $("#longitude").text(data.longitude);
+            });
+
+            $("#user_agent").text(navigator.userAgent);
+        });
+    </script>
+  </footer>
 </body>
 </html>
